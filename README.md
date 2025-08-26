@@ -36,7 +36,7 @@ Second, ensure that you have defined the path to reference files and parameters 
 Now, you can run the pipeline using:
 
 ```bash
-nextflow run nf-core/raredisease \
+nextflow run idat2vcf \
    -profile <docker/singularity/podman/shifter/charliecloud/conda/institute> \
    --input samplesheet.csv \
    --outdir <OUTDIR>
@@ -47,4 +47,3 @@ nextflow run nf-core/raredisease \
 > provided by the `-c` Nextflow option can be used to provide any configuration _**except for parameters**_;
 > see [docs](https://nf-co.re/usage/configuration#custom-configuration-files).
 
-For more details and further functionality, please refer to the [usage documentation](https://nf-co.re/raredisease/usage) and the [parameter documentation](https://nf-co.re/raredisease/parameters).
