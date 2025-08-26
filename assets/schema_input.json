@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/raredisease/master/assets/schema_input.json",
+    "title": "nf-core/raredisease pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "sample": {
+                "type": "string",
+                "exists": true,
+                "meta": ["sample"],
+                "pattern": "^\\S+$",
+                "errorMessage": "Sample name must be provided and cannot contain spaces"
+            },
+            "idat_1": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.idat$",
+                "errorMessage": "idat file for reads 1 must be provided, cannot contain spaces and must have extension '.idat'"
+            },
+            "idat_2": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.idat$",
+                "errorMessage": "idat file for reads 2 must be provided, cannot contain spaces and must have extension '.idat'"
+            },
+            "txt": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.txt$",
+                "errorMessage": "txt file must be provided, cannot contain spaces and must have extension '.txt'"
+            }
+            
+        },
+        "required": ["sample", "idat_1", "idat_2", "txt"]
+    }
+}

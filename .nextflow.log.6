@@ -1,0 +1,266 @@
+Aug-19 09:47:44.880 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf -profile docker -params-file ASA.json --max_memory 30GB -w 25H04858/work -resume
+Aug-19 09:47:45.026 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.6
+Aug-19 09:47:45.035 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/root/.nextflow/plugins; core-plugins: nf-amazon@2.9.3,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.4,nf-tower@1.9.3,nf-wave@1.7.5
+Aug-19 09:47:45.050 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-19 09:47:45.051 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-19 09:47:45.052 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-19 09:47:45.060 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-19 09:47:45.071 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/user2/Downloads/idat2vcf-main-annot/nextflow.config
+Aug-19 09:47:45.072 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/user2/Downloads/idat2vcf-main-annot/nextflow.config
+Aug-19 09:47:45.084 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /root/.nextflow/secrets/store.json
+Aug-19 09:47:45.086 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5173200b] - activable => nextflow.secret.LocalSecretsProvider@5173200b
+Aug-19 09:47:45.095 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-19 09:47:45.648 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [gitpod, debug, shifter, mamba, charliecloud, apptainer, conda, singularity, arm, docker, podman]
+Aug-19 09:47:45.667 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Aug-19 09:47:45.675 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [awesome_baekeland] DSL2 - revision: 170f00e2f8
+Aug-19 09:47:45.676 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation@1.1.3]
+Aug-19 09:47:45.676 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-19 09:47:45.676 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation@1.1.3]
+Aug-19 09:47:45.676 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: 1.1.3
+Aug-19 09:47:45.679 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Aug-19 09:47:45.679 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Aug-19 09:47:45.682 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Aug-19 09:47:45.706 [main] DEBUG nextflow.Session - Session UUID: 7e876b52-f355-4937-9fda-7bbf736094f8
+Aug-19 09:47:45.706 [main] DEBUG nextflow.Session - Run name: awesome_baekeland
+Aug-19 09:47:45.706 [main] DEBUG nextflow.Session - Executor pool size: 20
+Aug-19 09:47:45.710 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-19 09:47:45.712 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-19 09:47:45.721 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.6 build 5937
+  Created: 23-04-2025 16:53 UTC (24-04-2025 00:53 MYST)
+  System: Linux 6.8.0-65-generic
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 21.0.8+9-Ubuntu-0ubuntu122.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 14730@user2-LPC2 [127.0.1.1]
+  CPUs: 20 - Mem: 31.1 GB (19.7 GB) - Swap: 0 (0)
+Aug-19 09:47:45.750 [main] DEBUG nextflow.Session - Work-dir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work [ext2/ext3]
+Aug-19 09:47:45.750 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/user2/Downloads/idat2vcf-main-annot/bin
+Aug-19 09:47:45.756 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-19 09:47:45.761 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-19 09:47:45.786 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-19 09:47:45.790 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 21; maxThreads: 1000
+Aug-19 09:47:45.841 [main] DEBUG nextflow.Session - Session start
+Aug-19 09:47:45.844 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/user2/Downloads/idat2vcf-main-annot/25H04858/pipeline_info/execution_trace_2025-08-19_09-47-45.txt
+Aug-19 09:47:45.848 [main] DEBUG nextflow.Session - Using default localLib path: /home/user2/Downloads/idat2vcf-main-annot/lib
+Aug-19 09:47:45.851 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/user2/Downloads/idat2vcf-main-annot/lib
+Aug-19 09:47:46.035 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-19 09:47:46.040 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `genomes` -- Initialise it to a default value eg. `params.genomes = some_value`
+Aug-19 09:47:46.043 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsHelp:paramsHelp]; plugin Id: nf-validation
+Aug-19 09:47:46.050 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Aug-19 09:47:46.110 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'input': '/home/user2/Downloads/idat2vcf-main-annot/samplesheet_idats_25H04858.csv' with 'assets/schema_input.json'
+Aug-19 09:47:46.135 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'input': '/home/user2/Downloads/idat2vcf-main-annot/samplesheet_idats_25H04858.csv' with 'assets/schema_input.json'
+Aug-19 09:47:46.135 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'vep_plugin_files': '/media/user2/EEC66898C66862B79/reference/vep_files.csv' with 'assets/vep_plugin_files_schema.json'
+Aug-19 09:47:46.151 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'vep_plugin_files': '/media/user2/EEC66898C66862B79/reference/vep_files.csv' with 'assets/vep_plugin_files_schema.json'
+Aug-19 09:47:46.151 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `variant_consequences_snv` -- Initialise it to a default value eg. `params.variant_consequences_snv = some_value`
+Aug-19 09:47:46.151 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Aug-19 09:47:46.355 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Aug-19 09:47:46.363 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  synapsys/idat2vcf v1.0[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName          : [0;32mawesome_baekeland[0m
+  [0;34mcontainerEngine  : [0;32mdocker[0m
+  [0;34mlaunchDir        : [0;32m/home/user2/Downloads/idat2vcf-main-annot[0m
+  [0;34mworkDir          : [0;32m/home/user2/Downloads/idat2vcf-main-annot/25H04858/work[0m
+  [0;34mprojectDir       : [0;32m/home/user2/Downloads/idat2vcf-main-annot[0m
+  [0;34muserName         : [0;32mroot[0m
+  [0;34mprofile          : [0;32mdocker[0m
+  [0;34mconfigFiles      : [0;32m[0m
+
+[1mInput/output options[0m
+  [0;34minput            : [0;32msamplesheet_idats_25H04858.csv[0m
+  [0;34moutdir           : [0;32m25H04858/[0m
+
+[1mReference file options[0m
+  [0;34mfai              : [0;32m/home/user2/Downloads/refgenome/hg19-nochr/Homo_sapiens_assembly19.fa.fai[0m
+  [0;34mfasta            : [0;32m/home/user2/Downloads/refgenome/hg19-nochr/Homo_sapiens_assembly19.fa[0m
+  [0;34mmanifest_bpm     : [0;32m/home/user2/Downloads/Cancer/Reference_files/ASA-24v1-0_E1.bpm[0m
+  [0;34mmanifest_csv     : [0;32m/home/user2/Downloads/Cancer/Reference_files/new_ASA-24v1-0_E1.extended.csv[0m
+  [0;34mclinvar_cache    : [0;32m/media/user2/EEC66898C66862B79/reference/clinvar_rsid_subset_new.tsv[0m
+  [0;34mphenotype_cache  : [0;32m/media/user2/EEC66898C66862B79/reference/ClinVarVCVRelease_2025-0601.xml[0m
+  [0;34mvep_cache        : [0;32m/media/user2/EEC66898C66862B79/reference/vep_cache_and_plugins/[0m
+  [0;34mgnomad_af        : [0;32m/media/user2/EEC66898C66862B79/reference/gnomad_reformated_hg19.tab.gz[0m
+  [0;34mgenome           : [0;32mGRCh37[0m
+  [0;34mvep_plugin_files : [0;32m/media/user2/EEC66898C66862B79/reference/vep_files.csv[0m
+  [0;34mclusterfile      : [0;32m/home/user2/Downloads/Cancer/Reference_files/Hereditary_cancer_cluster_file_v2.egt[0m
+
+[1mAnnotation options[0m
+  [0;34mvep_cache_version: [0;32m112[0m
+
+[1mMax job request options[0m
+  [0;34mmax_memory       : [0;32m30GB[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use synapsys/idat2vcf for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/synapsys/idat2vcf/blob/master/CITATIONS.md
+
+Aug-19 09:47:46.979 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'samplesheet_idats_25H04858.csv' with 'assets/schema_input.json'
+Aug-19 09:47:46.981 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'samplesheet_idats_25H04858.csv' with 'assets/schema_input.json'
+Aug-19 09:47:47.063 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-19 09:47:47.065 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-19 09:47:47.066 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:TABIX_GNOMAD_AF` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-19 09:47:47.072 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.072 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.075 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-19 09:47:47.078 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=20; memory=31.1 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Aug-19 09:47:47.080 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-19 09:47:47.104 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-19 09:47:47.106 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-19 09:47:47.106 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:UNTAR_VEP_CACHE` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-19 09:47:47.107 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.107 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.121 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `vep_filters_scout_fmt` -- Initialise it to a default value eg. `params.vep_filters_scout_fmt = some_value`
+Aug-19 09:47:47.130 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_IDAT2VCF:IDAT2VCF:CREATE_HGNCIDS_FILE
+Aug-19 09:47:47.133 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.133 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.137 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC
+Aug-19 09:47:47.138 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*DRAGENA_IDAT2GTC` matches process NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC
+Aug-19 09:47:47.138 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*DRAGENA_IDAT2GTC` matches process NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC
+Aug-19 09:47:47.139 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.140 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.145 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-19 09:47:47.146 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*DRAGENA_GTC2VCF` matches process NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-19 09:47:47.146 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*DRAGENA_GTC2VCF` matches process NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-19 09:47:47.148 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.148 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.152 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `skip_snv_annotation` -- Initialise it to a default value eg. `params.skip_snv_annotation = some_value`
+Aug-19 09:47:47.157 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM
+Aug-19 09:47:47.159 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.159 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.166 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV
+Aug-19 09:47:47.167 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV` matches process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV
+Aug-19 09:47:47.169 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.169 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.173 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP
+Aug-19 09:47:47.174 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.175 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.178 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS
+Aug-19 09:47:47.179 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.180 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.183 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR
+Aug-19 09:47:47.184 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.184 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.187 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE
+Aug-19 09:47:47.189 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.189 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.192 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT
+Aug-19 09:47:47.193 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.193 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.197 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY
+Aug-19 09:47:47.198 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY` matches process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY
+Aug-19 09:47:47.198 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-19 09:47:47.199 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-19 09:47:47.203 [main] DEBUG nextflow.Session - Config process names validation disabled as requested
+Aug-19 09:47:47.203 [main] DEBUG nextflow.Session - Igniting dataflow network (35)
+Aug-19 09:47:47.208 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-19 09:47:47.208 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-19 09:47:47.208 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:CREATE_HGNCIDS_FILE
+Aug-19 09:47:47.208 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC
+Aug-19 09:47:47.208 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE
+Aug-19 09:47:47.209 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT
+Aug-19 09:47:47.210 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY
+Aug-19 09:47:47.211 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_f044c7d4eebe8f3a: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/annotate_genome_snvs.nf
+  Script_da2464953b817114: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_gt/main.nf
+  Script_72761ca5d33f61cb: /home/user2/Downloads/idat2vcf-main-annot/./workflows/idat2vcf.nf
+  Script_d0cd13ccedc019a9: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/bcftools/norm/main.nf
+  Script_c7a40091d1dcd928: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/dragena_gtc2vcf.nf
+  Script_0ca75353ef731985: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/postprocess_vep/main.nf
+  Script_4c02fb074fe681a7: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/ensemblvep/vep/main.nf
+  Script_922d3b1704801c99: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/rhocall/annotate/main.nf
+  Script_dbe8fe2b1aa377c4: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_clinvar/main.nf
+  Script_a7f7077ef5d586a9: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/tabix/bgziptabix/main.nf
+  Script_ec728fcb663d8874: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/prepare_references.nf
+  Script_ab17490e3ede57f1: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/genebe/main.nf
+  Script_8930cea728ac6de7: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/bcftools/concat_tab/main.nf
+  Script_ca0b4e5b68fe7ca3: /home/user2/Downloads/idat2vcf-main-annot/main.nf
+  Script_bbba31b40f633710: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/dragena_idat2gtc.nf
+  Script_ecd6ed522bd10b8e: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/mergevcfcolumns/main.nf
+  Script_52288f5a40d63c81: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../modules/create_hgncids_file.nf
+  Script_83a46e1657c4b2f5: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_phenotype/main.nf
+  Script_e644fb6da94d4bab: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/untar/main.nf
+  Script_0aa2573610e23815: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/tabix/tabix/main.nf
+  Script_38aa15fed2e56c54: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_microarray/main.nf
+Aug-19 09:47:47.211 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-19 09:47:47.211 [main] DEBUG nextflow.Session - Session await
+Aug-19 09:47:47.300 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [bf/18aeac] Cached process > NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF (media)
+Aug-19 09:47:47.300 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [e6/eb0980] Cached process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H04858)
+Aug-19 09:47:47.317 [Actor Thread 23] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-19 09:47:47.323 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [5d/f410ae] Cached process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H04858)
+Aug-19 09:47:47.338 [Actor Thread 23] INFO  nextflow.processor.TaskProcessor - [01/947116] Cached process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H04858)
+Aug-19 09:47:47.343 [Actor Thread 13] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Aug-19 09:47:47.380 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 09:47:47.381 [Task submitter] INFO  nextflow.Session - [03/429254] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H04858)
+Aug-19 09:52:47.240 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/03/429254cfe51aba45361ec8e24df900]
+Aug-19 09:57:47.318 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/03/429254cfe51aba45361ec8e24df900]
+Aug-19 10:02:47.400 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/03/429254cfe51aba45361ec8e24df900]
+Aug-19 10:07:47.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/03/429254cfe51aba45361ec8e24df900]
+Aug-19 10:10:55.636 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/03/429254cfe51aba45361ec8e24df900]
+Aug-19 10:10:55.637 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-19 10:10:55.672 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-19 10:10:55.672 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-19 10:10:55.672 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-19 10:10:55.699 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 10:10:55.699 [Task submitter] INFO  nextflow.Session - [a1/83a791] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H04858)
+Aug-19 10:12:16.951 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/a1/83a791b6bfd4b0298d7e3e95db20d3]
+Aug-19 10:12:16.973 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 10:12:16.973 [Task submitter] INFO  nextflow.Session - [80/1ec3cd] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H04858)
+Aug-19 10:12:25.856 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/80/1ec3cd5fcf9d611208a884dd926b2d]
+Aug-19 10:12:25.870 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 10:12:25.870 [Task submitter] INFO  nextflow.Session - [65/656e07] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H04858)
+Aug-19 10:12:35.959 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/65/656e07a6c2993c221498fb372839c2]
+Aug-19 10:12:35.970 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 10:12:35.970 [Task submitter] INFO  nextflow.Session - [08/4511cc] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H04858)
+Aug-19 10:12:47.482 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 10; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/08/4511ccdd0c33e1448ee9e486044a77]
+Aug-19 10:17:47.513 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 10; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/08/4511ccdd0c33e1448ee9e486044a77]
+Aug-19 10:22:47.563 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 10; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/08/4511ccdd0c33e1448ee9e486044a77]
+Aug-19 10:27:47.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 10; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H04858); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/08/4511ccdd0c33e1448ee9e486044a77]
+Aug-19 10:29:09.926 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/08/4511ccdd0c33e1448ee9e486044a77]
+Aug-19 10:29:09.943 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 10:29:09.943 [Task submitter] INFO  nextflow.Session - [42/15a0ca] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H04858)
+Aug-19 10:29:14.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/42/15a0ca557b18005c2c9c9bcc692f35]
+Aug-19 10:29:14.299 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-19 10:29:14.300 [Task submitter] INFO  nextflow.Session - [a1/3bec8a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H04858)
+Aug-19 10:29:19.698 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H04858); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/25H04858/work/a1/3bec8a10d308823ec23187e341f742]
+Aug-19 10:29:19.705 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-19 10:29:19.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-19 10:29:19.799 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-19 10:29:19.804 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Aug-19 10:29:19.804 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Aug-19 10:29:19.820 [main] INFO  nextflow.Nextflow - -[0;35m[synapsys/idat2vcf][0;32m Pipeline completed successfully[0m-
+Aug-19 10:29:19.822 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=7; failedCount=0; ignoredCount=0; cachedCount=4; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2h 55m 22s; failedDuration=0ms; cachedDuration=1m 30s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=6; peakMemory=30 GB; ]
+Aug-19 10:29:19.823 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-19 10:29:19.823 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Aug-19 10:29:20.323 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Aug-19 10:29:20.509 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-19 10:29:20.529 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.3'
+Aug-19 10:29:20.529 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
+Aug-19 10:29:20.530 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-19 10:29:20.530 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,999 @@
+Aug-22 10:22:10.043 [main] DEBUG nextflow.cli.Launcher - $> nextflow main.nf -profile docker -params-file ASA.json --max_memory 30GB -w B62/work
+Aug-22 10:22:10.205 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.6
+Aug-22 10:22:10.216 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/root/.nextflow/plugins; core-plugins: nf-amazon@2.9.3,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.4,nf-tower@1.9.3,nf-wave@1.7.5
+Aug-22 10:22:10.232 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-22 10:22:10.233 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-22 10:22:10.234 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-22 10:22:10.241 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-22 10:22:10.252 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/user2/Downloads/idat2vcf-main-annot/nextflow.config
+Aug-22 10:22:10.253 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/user2/Downloads/idat2vcf-main-annot/nextflow.config
+Aug-22 10:22:10.265 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /root/.nextflow/secrets/store.json
+Aug-22 10:22:10.267 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5173200b] - activable => nextflow.secret.LocalSecretsProvider@5173200b
+Aug-22 10:22:10.277 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-22 10:22:10.858 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [gitpod, debug, shifter, mamba, charliecloud, apptainer, conda, singularity, arm, docker, podman]
+Aug-22 10:22:10.877 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Aug-22 10:22:10.885 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [suspicious_pesquet] DSL2 - revision: 1efb1ed19c
+Aug-22 10:22:10.886 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation@1.1.3]
+Aug-22 10:22:10.887 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-22 10:22:10.887 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation@1.1.3]
+Aug-22 10:22:10.887 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: 1.1.3
+Aug-22 10:22:10.890 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.3' resolved
+Aug-22 10:22:10.890 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.3'
+Aug-22 10:22:10.893 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.3
+Aug-22 10:22:10.920 [main] DEBUG nextflow.Session - Session UUID: 884ccc3d-81bb-41ba-b1c9-f199e3c57927
+Aug-22 10:22:10.920 [main] DEBUG nextflow.Session - Run name: suspicious_pesquet
+Aug-22 10:22:10.920 [main] DEBUG nextflow.Session - Executor pool size: 20
+Aug-22 10:22:10.925 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-22 10:22:10.928 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-22 10:22:10.941 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.6 build 5937
+  Created: 23-04-2025 16:53 UTC (24-04-2025 00:53 MYST)
+  System: Linux 6.8.0-65-generic
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 21.0.8+9-Ubuntu-0ubuntu122.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 38732@user2-LPC2 [127.0.1.1]
+  CPUs: 20 - Mem: 31.1 GB (17.9 GB) - Swap: 0 (0)
+Aug-22 10:22:10.955 [main] DEBUG nextflow.Session - Work-dir: /home/user2/Downloads/idat2vcf-main-annot/B62/work [ext2/ext3]
+Aug-22 10:22:10.956 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/user2/Downloads/idat2vcf-main-annot/bin
+Aug-22 10:22:10.965 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-22 10:22:10.972 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-22 10:22:11.006 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-22 10:22:11.014 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 21; maxThreads: 1000
+Aug-22 10:22:11.090 [main] DEBUG nextflow.Session - Session start
+Aug-22 10:22:11.092 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/user2/Downloads/idat2vcf-main-annot/B62/pipeline_info/execution_trace_2025-08-22_10-22-10.txt
+Aug-22 10:22:11.095 [main] DEBUG nextflow.Session - Using default localLib path: /home/user2/Downloads/idat2vcf-main-annot/lib
+Aug-22 10:22:11.098 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/user2/Downloads/idat2vcf-main-annot/lib
+Aug-22 10:22:11.313 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-22 10:22:11.318 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `genomes` -- Initialise it to a default value eg. `params.genomes = some_value`
+Aug-22 10:22:11.321 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsHelp:paramsHelp]; plugin Id: nf-validation
+Aug-22 10:22:11.328 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Aug-22 10:22:11.386 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'input': '/home/user2/Downloads/idat2vcf-main-annot/samplesheet_idats_B62.csv' with 'assets/schema_input.json'
+Aug-22 10:22:11.415 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'input': '/home/user2/Downloads/idat2vcf-main-annot/samplesheet_idats_B62.csv' with 'assets/schema_input.json'
+Aug-22 10:22:11.416 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'vep_plugin_files': '/media/user2/EEC66898C66862B79/reference/vep_files.csv' with 'assets/vep_plugin_files_schema.json'
+Aug-22 10:22:11.432 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'vep_plugin_files': '/media/user2/EEC66898C66862B79/reference/vep_files.csv' with 'assets/vep_plugin_files_schema.json'
+Aug-22 10:22:11.432 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `variant_consequences_snv` -- Initialise it to a default value eg. `params.variant_consequences_snv = some_value`
+Aug-22 10:22:11.432 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Aug-22 10:22:11.636 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap, fromSamplesheet:fromSamplesheet]; plugin Id: nf-validation
+Aug-22 10:22:11.645 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  synapsys/idat2vcf v1.0[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName          : [0;32msuspicious_pesquet[0m
+  [0;34mcontainerEngine  : [0;32mdocker[0m
+  [0;34mlaunchDir        : [0;32m/home/user2/Downloads/idat2vcf-main-annot[0m
+  [0;34mworkDir          : [0;32m/home/user2/Downloads/idat2vcf-main-annot/B62/work[0m
+  [0;34mprojectDir       : [0;32m/home/user2/Downloads/idat2vcf-main-annot[0m
+  [0;34muserName         : [0;32mroot[0m
+  [0;34mprofile          : [0;32mdocker[0m
+  [0;34mconfigFiles      : [0;32m[0m
+
+[1mInput/output options[0m
+  [0;34minput            : [0;32msamplesheet_idats_B62.csv[0m
+  [0;34moutdir           : [0;32mB62/[0m
+
+[1mReference file options[0m
+  [0;34mfai              : [0;32m/home/user2/Downloads/refgenome/hg19-nochr/Homo_sapiens_assembly19.fa.fai[0m
+  [0;34mfasta            : [0;32m/home/user2/Downloads/refgenome/hg19-nochr/Homo_sapiens_assembly19.fa[0m
+  [0;34mmanifest_bpm     : [0;32m/home/user2/Downloads/Cancer/Reference_files/ASA-24v1-0_E1.bpm[0m
+  [0;34mmanifest_csv     : [0;32m/home/user2/Downloads/Cancer/Reference_files/new_ASA-24v1-0_E1.extended.csv[0m
+  [0;34mclinvar_cache    : [0;32m/media/user2/EEC66898C66862B79/reference/clinvar_rsid_subset_new.tsv[0m
+  [0;34mphenotype_cache  : [0;32m/media/user2/EEC66898C66862B79/reference/ClinVarVCVRelease_2025-0601.xml[0m
+  [0;34mvep_cache        : [0;32m/media/user2/EEC66898C66862B79/reference/vep_cache_and_plugins/[0m
+  [0;34mgnomad_af        : [0;32m/media/user2/EEC66898C66862B79/reference/gnomad_reformated_hg19.tab.gz[0m
+  [0;34mgenome           : [0;32mGRCh37[0m
+  [0;34mvep_plugin_files : [0;32m/media/user2/EEC66898C66862B79/reference/vep_files.csv[0m
+  [0;34mclusterfile      : [0;32m/home/user2/Downloads/Cancer/Reference_files/Hereditary_cancer_cluster_file_v2.egt[0m
+
+[1mAnnotation options[0m
+  [0;34mvep_cache_version: [0;32m112[0m
+
+[1mMax job request options[0m
+  [0;34mmax_memory       : [0;32m30GB[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use synapsys/idat2vcf for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/synapsys/idat2vcf/blob/master/CITATIONS.md
+
+Aug-22 10:22:12.317 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'samplesheet_idats_B62.csv' with 'assets/schema_input.json'
+Aug-22 10:22:12.323 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'samplesheet_idats_B62.csv' with 'assets/schema_input.json'
+Aug-22 10:22:12.411 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-22 10:22:12.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-22 10:22:12.415 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:TABIX_GNOMAD_AF` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-22 10:22:12.421 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.422 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.425 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-22 10:22:12.429 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=20; memory=31.1 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Aug-22 10:22:12.430 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-22 10:22:12.457 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-22 10:22:12.459 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:.*` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-22 10:22:12.460 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*PREPARE_REFERENCES:UNTAR_VEP_CACHE` matches process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-22 10:22:12.461 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.461 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.478 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `vep_filters_scout_fmt` -- Initialise it to a default value eg. `params.vep_filters_scout_fmt = some_value`
+Aug-22 10:22:12.489 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_IDAT2VCF:IDAT2VCF:CREATE_HGNCIDS_FILE
+Aug-22 10:22:12.492 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.492 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.498 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC
+Aug-22 10:22:12.500 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.500 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.508 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-22 10:22:12.508 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*DRAGENA_GTC2VCF` matches process NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-22 10:22:12.509 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*DRAGENA_GTC2VCF` matches process NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-22 10:22:12.510 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.510 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.515 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `skip_snv_annotation` -- Initialise it to a default value eg. `params.skip_snv_annotation = some_value`
+Aug-22 10:22:12.521 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM
+Aug-22 10:22:12.523 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.524 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.532 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV
+Aug-22 10:22:12.533 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV` matches process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV
+Aug-22 10:22:12.535 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.535 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.541 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP
+Aug-22 10:22:12.543 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.543 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.547 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS
+Aug-22 10:22:12.549 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.549 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.553 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR
+Aug-22 10:22:12.554 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.554 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.558 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE
+Aug-22 10:22:12.559 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.559 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.564 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT
+Aug-22 10:22:12.565 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.565 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.569 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY
+Aug-22 10:22:12.569 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:.*ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY` matches process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY
+Aug-22 10:22:12.570 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-22 10:22:12.570 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-22 10:22:12.575 [main] DEBUG nextflow.Session - Config process names validation disabled as requested
+Aug-22 10:22:12.575 [main] DEBUG nextflow.Session - Igniting dataflow network (35)
+Aug-22 10:22:12.586 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF
+Aug-22 10:22:12.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:UNTAR_VEP_CACHE
+Aug-22 10:22:12.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:CREATE_HGNCIDS_FILE
+Aug-22 10:22:12.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC
+Aug-22 10:22:12.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF
+Aug-22 10:22:12.587 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT
+Aug-22 10:22:12.588 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY
+Aug-22 10:22:12.588 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_caec422394fbf578: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/annotate_genome_snvs.nf
+  Script_da2464953b817114: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_gt/main.nf
+  Script_d0cd13ccedc019a9: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/bcftools/norm/main.nf
+  Script_c7a40091d1dcd928: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/dragena_gtc2vcf.nf
+  Script_0ca75353ef731985: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/postprocess_vep/main.nf
+  Script_922d3b1704801c99: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/rhocall/annotate/main.nf
+  Script_dbe8fe2b1aa377c4: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_clinvar/main.nf
+  Script_a7f7077ef5d586a9: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/tabix/bgziptabix/main.nf
+  Script_ec728fcb663d8874: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/prepare_references.nf
+  Script_8930cea728ac6de7: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/bcftools/concat_tab/main.nf
+  Script_ab17490e3ede57f1: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/genebe/main.nf
+  Script_9b6f760e61466dba: /home/user2/Downloads/idat2vcf-main-annot/./workflows/idat2vcf.nf
+  Script_4d48d43206f05b6d: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/ensemblvep/vep/main.nf
+  Script_bbba31b40f633710: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/dragena_idat2gtc.nf
+  Script_ecd6ed522bd10b8e: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/mergevcfcolumns/main.nf
+  Script_28d6108bb0ea185b: /home/user2/Downloads/idat2vcf-main-annot/main.nf
+  Script_52288f5a40d63c81: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../modules/create_hgncids_file.nf
+  Script_83a46e1657c4b2f5: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_phenotype/main.nf
+  Script_e644fb6da94d4bab: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/untar/main.nf
+  Script_0aa2573610e23815: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/tabix/tabix/main.nf
+  Script_38aa15fed2e56c54: /home/user2/Downloads/idat2vcf-main-annot/./workflows/../subworkflows/../modules/nf-core/annotate_microarray/main.nf
+Aug-22 10:22:12.588 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-22 10:22:12.588 [main] DEBUG nextflow.Session - Session await
+Aug-22 10:22:12.687 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:12.688 [Task submitter] INFO  nextflow.Session - [c1/3bad1f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05829)
+Aug-22 10:22:12.693 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:12.694 [Task submitter] INFO  nextflow.Session - [55/d98dbc] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05830)
+Aug-22 10:22:12.698 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:12.698 [Task submitter] INFO  nextflow.Session - [99/7ede7c] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF (media)
+Aug-22 10:22:15.644 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF (media); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/99/7ede7cd4bd646022a0fc0ecee764f9]
+Aug-22 10:22:15.644 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-22 10:22:15.695 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:PREPARE_REFERENCES:TABIX_GNOMAD_AF > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Aug-22 10:22:19.759 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/55/d98dbc06cda42e37f10fbab6e91cb4]
+Aug-22 10:22:19.768 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:19.768 [Task submitter] INFO  nextflow.Session - [0d/b69f3b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05835)
+Aug-22 10:22:19.803 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/c1/3bad1fe52e6750177c3170743ffe9e]
+Aug-22 10:22:19.807 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:19.807 [Task submitter] INFO  nextflow.Session - [40/b5db8d] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05834)
+Aug-22 10:22:27.022 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/b5db8d5f5401931edf3bd66e11f336]
+Aug-22 10:22:27.027 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:27.028 [Task submitter] INFO  nextflow.Session - [75/caaef7] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (MPD00590)
+Aug-22 10:22:27.049 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/0d/b69f3b4b23d37d5179ce9b6e5a2989]
+Aug-22 10:22:27.054 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:27.054 [Task submitter] INFO  nextflow.Session - [44/fbec17] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (MPD00591)
+Aug-22 10:22:34.258 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/44/fbec17f3e6c48860b59129349b7fdc]
+Aug-22 10:22:34.263 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:34.263 [Task submitter] INFO  nextflow.Session - [40/c9adf1] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (MPD00407)
+Aug-22 10:22:34.293 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/75/caaef7e264f2b4a58da17988ad0771]
+Aug-22 10:22:34.297 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:34.298 [Task submitter] INFO  nextflow.Session - [59/8ff30a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05836)
+Aug-22 10:22:42.334 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/59/8ff30a63fab00de2593d278d34f7e3]
+Aug-22 10:22:42.338 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:42.338 [Task submitter] INFO  nextflow.Session - [94/e0d010] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05831)
+Aug-22 10:22:42.360 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/c9adf1fd48d5c40df46d62f79eccf3]
+Aug-22 10:22:42.365 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:42.366 [Task submitter] INFO  nextflow.Session - [1d/f11c5e] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05830)
+Aug-22 10:22:50.312 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_IDAT2GTC (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/94/e0d010bcc48799ebd0b7e716cd3e1a]
+Aug-22 10:22:50.317 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:22:50.318 [Task submitter] INFO  nextflow.Session - [95/6442bb] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05829)
+Aug-22 10:23:04.249 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/1d/f11c5eb28de00a5259c2674a8d1f67]
+Aug-22 10:23:04.264 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:23:04.265 [Task submitter] INFO  nextflow.Session - [3e/c2ed61] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05834)
+Aug-22 10:23:04.270 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=60; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-22 10:23:11.085 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/95/6442bb30dd3a47adc1481d418e577e]
+Aug-22 10:23:11.089 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:23:11.090 [Task submitter] INFO  nextflow.Session - [38/9343b9] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05835)
+Aug-22 10:23:25.201 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/3e/c2ed61102f597876a6c4bf1544df0c]
+Aug-22 10:23:25.205 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:23:25.205 [Task submitter] INFO  nextflow.Session - [f3/323789] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (MPD00591)
+Aug-22 10:23:31.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/38/9343b95e495856ace0d24c61c8de98]
+Aug-22 10:23:31.833 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:23:31.833 [Task submitter] INFO  nextflow.Session - [bd/ee1cde] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (MPD00590)
+Aug-22 10:23:45.929 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f3/3237895b4afd40edf56d520d4c28fd]
+Aug-22 10:23:45.934 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:23:45.934 [Task submitter] INFO  nextflow.Session - [37/a16b12] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05836)
+Aug-22 10:23:52.377 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bd/ee1cde83baa4aa853adffc85550003]
+Aug-22 10:23:52.381 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:23:52.382 [Task submitter] INFO  nextflow.Session - [98/bcff17] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (MPD00407)
+Aug-22 10:24:07.560 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/a16b12812ddd203943514c13fc33d9]
+Aug-22 10:24:07.565 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:24:07.565 [Task submitter] INFO  nextflow.Session - [56/5decfb] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05831)
+Aug-22 10:24:14.483 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/98/bcff17745cba02e06b44f6d465c7d6]
+Aug-22 10:24:26.715 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: NFCORE_IDAT2VCF:IDAT2VCF:DRAGENA_GTC2VCF (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/5decfb4f6f3baec8172f9e7b216e7c]
+Aug-22 10:24:26.719 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:24:26.720 [Task submitter] INFO  nextflow.Session - [02/1fb815] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05830)
+Aug-22 10:24:38.420 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/02/1fb815b62e2506b5337937317b1666]
+Aug-22 10:24:38.426 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:24:38.426 [Task submitter] INFO  nextflow.Session - [6a/d82005] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05829)
+Aug-22 10:24:49.240 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/6a/d820059166c91f8d789ea6989ce459]
+Aug-22 10:24:49.244 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:24:49.244 [Task submitter] INFO  nextflow.Session - [d3/13d852] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05834)
+Aug-22 10:25:00.016 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/d3/13d852c6eec20b24b90cac52d43fba]
+Aug-22 10:25:00.021 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:25:00.021 [Task submitter] INFO  nextflow.Session - [5f/1b31c4] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05835)
+Aug-22 10:25:10.965 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/5f/1b31c445fb29ceb7e51b7be8642e4f]
+Aug-22 10:25:10.969 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:25:10.969 [Task submitter] INFO  nextflow.Session - [69/bb42eb] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (MPD00591)
+Aug-22 10:25:21.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/69/bb42eb7f212736939dccf7ee331c55]
+Aug-22 10:25:21.730 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:25:21.730 [Task submitter] INFO  nextflow.Session - [a8/d2f180] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (MPD00590)
+Aug-22 10:25:32.139 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/a8/d2f180443185f6689e7c3b676fde7c]
+Aug-22 10:25:32.143 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:25:32.144 [Task submitter] INFO  nextflow.Session - [db/5924eb] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05836)
+Aug-22 10:25:42.831 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/db/5924eb57fc9b307262cc2eaff4b6b4]
+Aug-22 10:25:42.834 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:25:42.834 [Task submitter] INFO  nextflow.Session - [02/9b7890] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (MPD00407)
+Aug-22 10:25:53.423 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/02/9b7890a70f0f37f95e10b368388bfc]
+Aug-22 10:25:53.429 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:25:53.429 [Task submitter] INFO  nextflow.Session - [00/044164] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05831)
+Aug-22 10:26:04.261 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:BCFTOOLS_NORM (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/04416479de77556a037daede78c887]
+Aug-22 10:26:04.271 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:26:04.271 [Task submitter] INFO  nextflow.Session - [a5/cbe4f0] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05830)
+Aug-22 10:27:12.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 30; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/a5/cbe4f02ef1224e12500c8d95db2691]
+Aug-22 10:27:13.308 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 10:32:12.555 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 30; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/a5/cbe4f02ef1224e12500c8d95db2691]
+Aug-22 10:32:13.532 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 10:37:12.608 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 30; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/a5/cbe4f02ef1224e12500c8d95db2691]
+Aug-22 10:37:13.748 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 10:39:45.664 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/a5/cbe4f02ef1224e12500c8d95db2691]
+Aug-22 10:39:45.674 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:39:45.674 [Task submitter] INFO  nextflow.Session - [31/abc46e] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829)
+Aug-22 10:39:45.675 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 10:39:45.676 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 10:39:45.676 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 10:42:12.660 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+Aug-22 10:42:13.753 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+Aug-22 10:47:12.722 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+Aug-22 10:47:13.898 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+Aug-22 10:52:12.726 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+Aug-22 10:52:14.088 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+Aug-22 10:53:27.495 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/31/abc46eef3af1cc85513c731fab8a43]
+Aug-22 10:53:27.503 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 10:53:27.503 [Task submitter] INFO  nextflow.Session - [7c/81d58b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834)
+Aug-22 10:53:27.504 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 10:53:27.505 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 10:53:27.505 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 10:57:12.778 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+Aug-22 10:57:14.608 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+Aug-22 11:02:12.840 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+Aug-22 11:02:14.778 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+Aug-22 11:07:06.430 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7c/81d58b39efbc578461d30d8cec595b]
+Aug-22 11:07:06.436 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 11:07:06.436 [Task submitter] INFO  nextflow.Session - [84/b9502a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835)
+Aug-22 11:07:06.441 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 11:07:06.441 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 11:07:06.441 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 11:07:12.844 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+Aug-22 11:07:15.445 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+Aug-22 11:12:12.927 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+Aug-22 11:12:15.582 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+Aug-22 11:17:12.978 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+Aug-22 11:17:15.712 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+Aug-22 11:20:49.403 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/84/b9502a3965376a2a28ce4143467e52]
+Aug-22 11:20:49.413 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 11:20:49.413 [Task submitter] INFO  nextflow.Session - [00/40c2b3] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591)
+Aug-22 11:20:49.435 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 11:20:49.435 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 11:20:49.436 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 11:22:13.071 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+Aug-22 11:22:16.468 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+Aug-22 11:27:13.086 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+Aug-22 11:27:16.624 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+Aug-22 11:32:13.148 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+Aug-22 11:32:16.769 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+Aug-22 11:34:24.808 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/00/40c2b3e18c06597a89de633ce7210a]
+Aug-22 11:34:24.815 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 11:34:24.815 [Task submitter] INFO  nextflow.Session - [b3/5dfe8a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590)
+Aug-22 11:34:24.839 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 11:34:24.840 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 11:34:24.840 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 11:37:13.200 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+Aug-22 11:37:16.885 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+Aug-22 11:42:13.248 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+Aug-22 11:42:17.017 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+Aug-22 11:47:13.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+Aug-22 11:47:17.199 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+Aug-22 11:48:03.919 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b3/5dfe8a7d507c64dbbdf7e842dcf227]
+Aug-22 11:48:03.930 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 11:48:03.931 [Task submitter] INFO  nextflow.Session - [13/283f3f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836)
+Aug-22 11:48:03.940 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 11:48:03.940 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 11:48:03.940 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 11:52:13.363 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+Aug-22 11:52:18.048 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+Aug-22 11:57:13.378 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+Aug-22 11:57:18.187 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+Aug-22 12:01:35.338 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/13/283f3f14f23b12b6763a1ed51e5b36]
+Aug-22 12:01:35.344 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:01:35.345 [Task submitter] INFO  nextflow.Session - [15/6aba1f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407)
+Aug-22 12:01:35.347 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 12:01:35.347 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 12:01:35.347 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 12:02:13.413 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+Aug-22 12:02:18.359 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+Aug-22 12:07:13.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+Aug-22 12:07:18.508 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+Aug-22 12:12:13.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+Aug-22 12:12:18.683 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+Aug-22 12:15:11.552 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/15/6aba1f093f71702c761fae8bdb793d]
+Aug-22 12:15:11.557 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:15:11.558 [Task submitter] INFO  nextflow.Session - [cd/a211e0] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831)
+Aug-22 12:15:11.560 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 12:15:11.560 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 12:15:11.560 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 12:17:13.518 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 12:17:19.632 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+~> TaskHandler[id: 46; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/4a/ec03bcff5deb92d04536fc24b8e4d7]
+Aug-22 12:22:13.554 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 12:22:19.835 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+~> TaskHandler[id: 46; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/4a/ec03bcff5deb92d04536fc24b8e4d7]
+Aug-22 12:27:13.609 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 12:27:19.991 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+~> TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+~> TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+~> TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+~> TaskHandler[id: 46; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/4a/ec03bcff5deb92d04536fc24b8e4d7]
+Aug-22 12:28:39.876 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cd/a211e08a294cda2ea7a1de0bbe7011]
+Aug-22 12:28:39.880 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:28:39.880 [Task submitter] INFO  nextflow.Session - [f2/4b044b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830)
+Aug-22 12:28:39.886 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:28:39.886 [Task submitter] INFO  nextflow.Session - [27/211f40] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829)
+Aug-22 12:28:39.895 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Aug-22 12:28:39.895 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-22 12:28:39.895 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ENSEMBLVEP_SNV > Skipping output binding because one or more optional files are missing: fileoutparam<3>
+Aug-22 12:30:26.844 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/211f4072a07bac2de95ac6c2bb028a]
+Aug-22 12:30:26.849 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:30:26.849 [Task submitter] INFO  nextflow.Session - [29/d549e2] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834)
+Aug-22 12:30:26.853 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f2/4b044b80152866182207557e243da0]
+Aug-22 12:30:26.858 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:30:26.858 [Task submitter] INFO  nextflow.Session - [26/b147ca] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835)
+Aug-22 12:32:11.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/29/d549e2822328c4ebd8ed193c3f92d4]
+Aug-22 12:32:11.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/b147cae695777ccdc31be18c789bce]
+Aug-22 12:32:11.584 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:32:11.585 [Task submitter] INFO  nextflow.Session - [de/908e19] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591)
+Aug-22 12:32:11.588 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:32:11.588 [Task submitter] INFO  nextflow.Session - [ff/3ccd86] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590)
+Aug-22 12:32:13.680 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+~> TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+Aug-22 12:32:20.591 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+~> TaskHandler[id: 46; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/4a/ec03bcff5deb92d04536fc24b8e4d7]
+~> TaskHandler[id: 47; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/34/8ec58b8139671464657c2f021e818d]
+~> TaskHandler[id: 48; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/d2/4ef7d0d34d17d87d1756d4c92d63df]
+~> TaskHandler[id: 49; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b4/a945c3813c80c6c83293e3a4bb0dcd]
+~> TaskHandler[id: 51; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ad/cc4926ec48588732352f945a576606]
+~> TaskHandler[id: 50; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7e/bb8c8c7357f7da74ed42ab9a51ea78]
+Aug-22 12:33:54.423 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/3ccd866f62a383ceb13d5c889d7b31]
+Aug-22 12:33:54.427 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:33:54.427 [Task submitter] INFO  nextflow.Session - [47/cf249f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836)
+Aug-22 12:33:54.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/908e197d48b911f3d5de9c295ff590]
+Aug-22 12:33:54.466 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:33:54.466 [Task submitter] INFO  nextflow.Session - [4a/ec03bc] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00407)
+Aug-22 12:35:36.325 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/47/cf249fc4c919d5c87acf14b42b395c]
+Aug-22 12:35:36.328 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:35:36.328 [Task submitter] INFO  nextflow.Session - [34/8ec58b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05831)
+Aug-22 12:35:36.569 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/4a/ec03bcff5deb92d04536fc24b8e4d7]
+Aug-22 12:35:36.573 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:35:36.573 [Task submitter] INFO  nextflow.Session - [d2/4ef7d0] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05830)
+Aug-22 12:35:47.122 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/d2/4ef7d0d34d17d87d1756d4c92d63df]
+Aug-22 12:35:47.127 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:35:47.127 [Task submitter] INFO  nextflow.Session - [b4/a945c3] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05829)
+Aug-22 12:35:57.444 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b4/a945c3813c80c6c83293e3a4bb0dcd]
+Aug-22 12:35:57.447 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:35:57.447 [Task submitter] INFO  nextflow.Session - [ad/cc4926] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05835)
+Aug-22 12:36:07.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ad/cc4926ec48588732352f945a576606]
+Aug-22 12:36:07.661 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:36:07.661 [Task submitter] INFO  nextflow.Session - [7e/bb8c8c] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05834)
+Aug-22 12:36:17.928 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/7e/bb8c8c7357f7da74ed42ab9a51ea78]
+Aug-22 12:36:17.934 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:36:17.934 [Task submitter] INFO  nextflow.Session - [ef/6ca4da] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (MPD00591)
+Aug-22 12:36:28.155 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ef/6ca4da8918e068d4cb04be87cd9c75]
+Aug-22 12:36:28.159 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:36:28.159 [Task submitter] INFO  nextflow.Session - [c6/be9c02] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (MPD00590)
+Aug-22 12:36:38.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/c6/be9c02373242dc314f7b3d1c89b571]
+Aug-22 12:36:38.369 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:36:38.369 [Task submitter] INFO  nextflow.Session - [e8/f71822] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05836)
+Aug-22 12:36:48.695 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/e8/f718223ee8542329e9943278a6f690]
+Aug-22 12:36:48.702 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:36:48.703 [Task submitter] INFO  nextflow.Session - [8c/f33848] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (MPD00407)
+Aug-22 12:36:58.995 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/8c/f338484b2f02782565a37e00916621]
+Aug-22 12:36:59.000 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:36:59.000 [Task submitter] INFO  nextflow.Session - [f0/99b142] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05830)
+Aug-22 12:37:11.274 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f0/99b142f38595caa69592d47faffce0]
+Aug-22 12:37:11.278 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:11.278 [Task submitter] INFO  nextflow.Session - [c5/dc562f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05829)
+Aug-22 12:37:13.779 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 47; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/34/8ec58b8139671464657c2f021e818d]
+~> TaskHandler[id: 57; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/c5/dc562f0a417482aae6b7b853be4886]
+Aug-22 12:37:19.450 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:POSTPROCESS_VEP (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/34/8ec58b8139671464657c2f021e818d]
+Aug-22 12:37:19.453 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:19.453 [Task submitter] INFO  nextflow.Session - [97/c4c556] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05835)
+Aug-22 12:37:21.454 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 59; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2f/80703a6787c91af2d2452f097d33b6]
+~> TaskHandler[id: 60; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b8/88a727c1bf61de707b5ce02c998c77]
+~> TaskHandler[id: 61; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/08c6b6008ed6cac1ae447bedf5ac31]
+~> TaskHandler[id: 62; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/95/08328611ce63eb09ccbf040fe0de5d]
+~> TaskHandler[id: 63; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/df/114a6fbc7e55203fd2d8fa0c8dbeaf]
+~> TaskHandler[id: 64; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/0458d2011cd60e6ad638b86e0c4db2]
+~> TaskHandler[id: 65; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/de88ca7a3106985e10add800da0dd2]
+Aug-22 12:37:22.981 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/c5/dc562f0a417482aae6b7b853be4886]
+Aug-22 12:37:22.984 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:22.984 [Task submitter] INFO  nextflow.Session - [2f/80703a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05834)
+Aug-22 12:37:31.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/97/c4c5564557ab43f8696a68ed2d9d78]
+Aug-22 12:37:31.390 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:31.390 [Task submitter] INFO  nextflow.Session - [b8/88a727] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00591)
+Aug-22 12:37:34.796 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2f/80703a6787c91af2d2452f097d33b6]
+Aug-22 12:37:34.799 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:34.799 [Task submitter] INFO  nextflow.Session - [36/08c6b6] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00590)
+Aug-22 12:37:43.214 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b8/88a727c1bf61de707b5ce02c998c77]
+Aug-22 12:37:43.219 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:43.219 [Task submitter] INFO  nextflow.Session - [95/083286] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05836)
+Aug-22 12:37:46.639 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/08c6b6008ed6cac1ae447bedf5ac31]
+Aug-22 12:37:46.644 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:46.644 [Task submitter] INFO  nextflow.Session - [df/114a6f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00407)
+Aug-22 12:37:55.185 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/95/08328611ce63eb09ccbf040fe0de5d]
+Aug-22 12:37:55.189 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:55.189 [Task submitter] INFO  nextflow.Session - [36/0458d2] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830)
+Aug-22 12:37:58.539 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/df/114a6fbc7e55203fd2d8fa0c8dbeaf]
+Aug-22 12:37:58.543 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:37:58.543 [Task submitter] INFO  nextflow.Session - [de/de88ca] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05831)
+Aug-22 12:38:09.262 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:MERGE_VCF_COLUMNS (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/de/de88ca7a3106985e10add800da0dd2]
+Aug-22 12:38:09.265 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:38:09.265 [Task submitter] INFO  nextflow.Session - [25/9e9c67] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05829)
+Aug-22 12:42:13.810 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 64; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/0458d2011cd60e6ad638b86e0c4db2]
+~> TaskHandler[id: 66; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/25/9e9c67029cfa6b0fb76c007b98a3b4]
+Aug-22 12:42:22.330 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+Aug-22 12:47:13.899 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 64; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/0458d2011cd60e6ad638b86e0c4db2]
+~> TaskHandler[id: 66; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/25/9e9c67029cfa6b0fb76c007b98a3b4]
+Aug-22 12:47:22.411 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+Aug-22 12:52:13.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 64; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/0458d2011cd60e6ad638b86e0c4db2]
+~> TaskHandler[id: 66; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/25/9e9c67029cfa6b0fb76c007b98a3b4]
+Aug-22 12:52:22.489 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+Aug-22 12:57:13.995 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 64; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/0458d2011cd60e6ad638b86e0c4db2]
+~> TaskHandler[id: 66; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05829); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/25/9e9c67029cfa6b0fb76c007b98a3b4]
+Aug-22 12:57:22.569 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+Aug-22 12:58:04.122 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/0458d2011cd60e6ad638b86e0c4db2]
+Aug-22 12:58:04.125 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:58:04.126 [Task submitter] INFO  nextflow.Session - [37/1c267a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835)
+Aug-22 12:58:10.348 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/25/9e9c67029cfa6b0fb76c007b98a3b4]
+Aug-22 12:58:10.353 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 12:58:10.353 [Task submitter] INFO  nextflow.Session - [40/192296] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834)
+Aug-22 13:02:14.089 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+Aug-22 13:02:23.447 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+Aug-22 13:07:14.100 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+Aug-22 13:07:23.527 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+Aug-22 13:12:14.174 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+Aug-22 13:12:23.612 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+Aug-22 13:17:14.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+~> TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+Aug-22 13:17:23.697 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+Aug-22 13:18:30.778 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/40/192296f16b2adc8a1caa692c47090e]
+Aug-22 13:18:30.785 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:18:30.785 [Task submitter] INFO  nextflow.Session - [b1/2cd76f] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591)
+Aug-22 13:18:30.878 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/37/1c267a5683f3d50dfdffaee3fccb31]
+Aug-22 13:18:30.881 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:18:30.882 [Task submitter] INFO  nextflow.Session - [48/51d3d0] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590)
+Aug-22 13:22:14.271 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+Aug-22 13:22:23.949 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+Aug-22 13:27:14.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+Aug-22 13:27:24.041 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+Aug-22 13:32:14.352 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+Aug-22 13:32:24.112 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+Aug-22 13:37:14.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+~> TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+Aug-22 13:37:24.186 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+Aug-22 13:38:09.327 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/48/51d3d0b8b94cef4ecaebfb8f4d3968]
+Aug-22 13:38:09.328 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b1/2cd76fe316a6a018627a1d691ce593]
+Aug-22 13:38:09.334 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:38:09.334 [Task submitter] INFO  nextflow.Session - [56/f70670] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836)
+Aug-22 13:38:09.339 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:38:09.339 [Task submitter] INFO  nextflow.Session - [fe/3b0c5b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407)
+Aug-22 13:42:14.391 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+Aug-22 13:42:24.411 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+~> TaskHandler[id: 79; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/36139325488e2a37e395108b456e71]
+~> TaskHandler[id: 78; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/46/1b710a3907844a939c984b58181ef9]
+Aug-22 13:47:14.447 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+Aug-22 13:47:24.496 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+~> TaskHandler[id: 79; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/36139325488e2a37e395108b456e71]
+~> TaskHandler[id: 78; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/46/1b710a3907844a939c984b58181ef9]
+Aug-22 13:52:14.525 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+Aug-22 13:52:24.581 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+~> TaskHandler[id: 79; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/36139325488e2a37e395108b456e71]
+~> TaskHandler[id: 78; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/46/1b710a3907844a939c984b58181ef9]
+Aug-22 13:57:14.579 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+~> TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+Aug-22 13:57:24.691 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+~> TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+~> TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+~> TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+~> TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+~> TaskHandler[id: 79; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00591); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/36139325488e2a37e395108b456e71]
+~> TaskHandler[id: 78; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00590); status: NEW; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/46/1b710a3907844a939c984b58181ef9]
+Aug-22 13:57:49.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/56/f706709a992c30adb0ee9d6d7ff273]
+Aug-22 13:57:49.287 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:57:49.287 [Task submitter] INFO  nextflow.Session - [bb/5df5c6] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831)
+Aug-22 13:57:49.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/3b0c5b998ba75e60129cfedfe34c93]
+Aug-22 13:57:49.317 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:57:49.317 [Task submitter] INFO  nextflow.Session - [b6/8b643b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830)
+Aug-22 13:57:54.420 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b6/8b643bc1946b7e275bfbf99c2dc8f1]
+Aug-22 13:57:54.423 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:57:54.423 [Task submitter] INFO  nextflow.Session - [fe/7c8526] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829)
+Aug-22 13:57:59.381 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/fe/7c85261523ba2d9f11610df6b09a46]
+Aug-22 13:57:59.384 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:57:59.384 [Task submitter] INFO  nextflow.Session - [ff/39ced3] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834)
+Aug-22 13:58:02.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_CLINVAR (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/bb/5df5c6b83c8eb976bd75ad40f352b9]
+Aug-22 13:58:02.164 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:02.164 [Task submitter] INFO  nextflow.Session - [2e/96dc0a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835)
+Aug-22 13:58:04.333 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ff/39ced3da55c53fb436a2d0c0c0b62c]
+Aug-22 13:58:04.336 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:04.337 [Task submitter] INFO  nextflow.Session - [36/361393] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00591)
+Aug-22 13:58:07.119 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/2e/96dc0accb775274da99041c97b55ef]
+Aug-22 13:58:07.122 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:07.122 [Task submitter] INFO  nextflow.Session - [46/1b710a] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00590)
+Aug-22 13:58:09.317 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/36/36139325488e2a37e395108b456e71]
+Aug-22 13:58:09.320 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:09.320 [Task submitter] INFO  nextflow.Session - [02/a9a150] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05836)
+Aug-22 13:58:12.029 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/46/1b710a3907844a939c984b58181ef9]
+Aug-22 13:58:12.033 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:12.033 [Task submitter] INFO  nextflow.Session - [94/c25ac8] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00407)
+Aug-22 13:58:14.131 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/02/a9a150ca4b403747ed68dced4786a8]
+Aug-22 13:58:14.134 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:14.134 [Task submitter] INFO  nextflow.Session - [24/dd9fa2] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05830)
+Aug-22 13:58:16.977 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/94/c25ac81a6e3ef9b85593d914a6e820]
+Aug-22 13:58:16.980 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:16.980 [Task submitter] INFO  nextflow.Session - [27/824ed7] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05829)
+Aug-22 13:58:20.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05830); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/24/dd9fa264d04ad70f300c56a558a002]
+Aug-22 13:58:20.449 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:20.449 [Task submitter] INFO  nextflow.Session - [b7/b5bc79] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05831)
+Aug-22 13:58:23.163 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05829); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/27/824ed72b3ba5d56c4b4195c8182f6d]
+Aug-22 13:58:23.167 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:23.167 [Task submitter] INFO  nextflow.Session - [cb/c57fd0] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05834)
+Aug-22 13:58:29.409 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05834); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/cb/c57fd01a051b82d65f590f0e66510e]
+Aug-22 13:58:29.412 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:29.412 [Task submitter] INFO  nextflow.Session - [ae/22e450] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05835)
+Aug-22 13:58:35.631 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05835); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/ae/22e450a0b2a931c4cd123878a2b3c8]
+Aug-22 13:58:35.634 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:35.635 [Task submitter] INFO  nextflow.Session - [1b/5be120] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (MPD00591)
+Aug-22 13:58:41.873 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (MPD00591); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/1b/5be12090049e84ef93b9d4d0640ea6]
+Aug-22 13:58:41.876 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:41.877 [Task submitter] INFO  nextflow.Session - [75/287146] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (MPD00590)
+Aug-22 13:58:48.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (MPD00590); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/75/287146aea2154325227b71a5e6f558]
+Aug-22 13:58:48.138 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:48.138 [Task submitter] INFO  nextflow.Session - [60/ecf7ee] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05836)
+Aug-22 13:58:54.382 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05836); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/60/ecf7ee80503343d0a9d665c3acc300]
+Aug-22 13:58:54.385 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 13:58:54.385 [Task submitter] INFO  nextflow.Session - [1c/9c87fc] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (MPD00407)
+Aug-22 13:59:00.643 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (MPD00407); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/1c/9c87fc44be52157ca1151a0472c681]
+Aug-22 14:02:14.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 84; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b7/b5bc79043d80d988d232a5287f4028]
+Aug-22 14:07:14.633 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 84; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b7/b5bc79043d80d988d232a5287f4028]
+Aug-22 14:12:14.656 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 84; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05831); status: RUNNING; exit: -; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b7/b5bc79043d80d988d232a5287f4028]
+Aug-22 14:14:19.643 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_PHENOTYPE (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/b7/b5bc79043d80d988d232a5287f4028]
+Aug-22 14:14:19.661 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 14:14:19.662 [Task submitter] INFO  nextflow.Session - [f6/d5736b] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05831)
+Aug-22 14:14:23.649 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_GT (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/f6/d5736b2cf00ab6871e1ba2cc296631]
+Aug-22 14:14:23.665 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-22 14:14:23.666 [Task submitter] INFO  nextflow.Session - [26/469227] Submitted process > NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05831)
+Aug-22 14:14:28.724 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: NFCORE_IDAT2VCF:IDAT2VCF:ANNOTATE_GENOME_SNVS:ANNOTATE_MICROARRAY (25H05831); status: COMPLETED; exit: 0; error: -; workDir: /home/user2/Downloads/idat2vcf-main-annot/B62/work/26/469227e5c7430854b8fc2570f22404]
+Aug-22 14:14:28.727 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-22 14:14:28.825 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-22 14:14:28.826 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-22 14:14:28.829 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Aug-22 14:14:28.829 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Aug-22 14:14:28.843 [main] INFO  nextflow.Nextflow - -[0;35m[synapsys/idat2vcf][0;32m Pipeline completed successfully[0m-
+Aug-22 14:14:28.855 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=91; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=19h 2m 41s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=6; peakMemory=30 GB; ]
+Aug-22 14:14:28.855 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-22 14:14:28.856 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Aug-22 14:14:29.353 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Aug-22 14:14:29.499 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-22 14:14:29.524 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.3'
+Aug-22 14:14:29.525 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
+Aug-22 14:14:29.525 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-22 14:14:29.525 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
