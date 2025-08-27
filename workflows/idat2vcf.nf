@@ -113,8 +113,8 @@ workflow IDAT2VCF {
                                                                     : Channel.value([]) 
     clusterfile                 = params.clusterfile                ? Channel.fromPath(params.clusterfile).collect()
                                                                     : Channel.value([])
-    ch_gnomad_af_tab            = params.gnomad_af                  ? Channel.fromPath(params.gnomad_af).map{ it -> [[id:it[0].simpleName], it] }.collect()
-                                                                    : Channel.value([[],[]])
+    //ch_gnomad_af_tab            = params.gnomad_af                  ? Channel.fromPath(params.gnomad_af).map{ it -> [[id:it[0].simpleName], it] }.collect()
+    //                                                                : Channel.value([[],[]])
     ch_vep_cache_unprocessed    = params.vep_cache                  ? Channel.fromPath(params.vep_cache).map { it -> [[id:'vep_cache'], it] }.collect()
                                                                     : Channel.value([[],[]])
     ch_vep_filters_std_fmt      = params.vep_filters                ? Channel.fromPath(params.vep_filters).map { it -> [[id:'standard'],it]}.collect()
@@ -124,7 +124,7 @@ workflow IDAT2VCF {
 
     // Prepare references and indices.
     PREPARE_REFERENCES (
-        ch_gnomad_af_tab,
+    //    ch_gnomad_af_tab,
         ch_vep_cache_unprocessed
     )
     .set { ch_references }                                                                                                                   
@@ -136,10 +136,10 @@ workflow IDAT2VCF {
                                                                     : Channel.value([])
     ch_vep_cache                = ( params.vep_cache && params.vep_cache.endsWith("tar.gz") )  ? ch_references.vep_resources
                                                                     : ( params.vep_cache    ? Channel.fromPath(params.vep_cache).collect() : Channel.value([]) )
-    ch_gnomad_afidx             = params.gnomad_af_idx              ? Channel.fromPath(params.gnomad_af_idx).collect()
-                                                                    : ch_references.gnomad_af_idx
-    ch_gnomad_af                = params.gnomad_af                  ? ch_gnomad_af_tab.join(ch_gnomad_afidx).map {meta, tab, idx -> [tab,idx]}.collect()
-                                                                    : Channel.empty()
+    //ch_gnomad_afidx             = params.gnomad_af_idx              ? Channel.fromPath(params.gnomad_af_idx).collect()
+    //                                                                : ch_references.gnomad_af_idx
+    //ch_gnomad_af                = params.gnomad_af                  ? ch_gnomad_af_tab.join(ch_gnomad_afidx).map {meta, tab, idx -> [tab,idx]}.collect()
+    //                                                                : Channel.empty()
 
     ch_vep_extra_files_unsplit  = params.vep_plugin_files           ? Channel.fromPath(params.vep_plugin_files).collect()
                                                                     : Channel.value([])
@@ -204,7 +204,7 @@ workflow IDAT2VCF {
             params.vep_cache_version,
             ch_vep_cache,
             ch_genome_fasta,
-            ch_gnomad_af,
+            //ch_gnomad_af,
             ch_vep_extra_files,
             clinvar_cache,
             phenotype_cache
