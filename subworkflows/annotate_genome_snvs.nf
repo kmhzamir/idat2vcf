@@ -27,7 +27,7 @@ workflow ANNOTATE_GENOME_SNVS {
         val_vep_cache_version // string: [mandatory] default: 107
         ch_vep_cache          // channel: [mandatory] [ path(cache) ]
         ch_genome_fasta       // channel: [mandatory] [ val(meta), path(fasta) ]
-        ch_gnomad_af          // channel: [optional] [ path(tab), path(tbi) ]
+        //ch_gnomad_af          // channel: [optional] [ path(tab), path(tbi) ]
         ch_vep_extra_files    // channel: [mandatory] [ path(files) ]
         clinvar_cache
         phenotype_cache
