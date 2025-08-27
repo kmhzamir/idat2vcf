@@ -15,16 +15,16 @@ workflow PREPARE_REFERENCES {
     main:
         ch_versions    = Channel.empty()
 
-        TABIX_GNOMAD_AF(ch_gnomad_af_tab)
+        //TABIX_GNOMAD_AF(ch_gnomad_af_tab)
         UNTAR_VEP_CACHE (ch_vep_cache)
 
         // Gather versions
-        ch_versions = ch_versions.mix(TABIX_GNOMAD_AF.out.versions)
+        //ch_versions = ch_versions.mix(TABIX_GNOMAD_AF.out.versions)
         ch_versions = ch_versions.mix(UNTAR_VEP_CACHE.out.versions)
 
 
     emit:
-        gnomad_af_idx         = TABIX_GNOMAD_AF.out.tbi.collect()                                // channel: [ val(meta), path(fasta) ]
+        //gnomad_af_idx         = TABIX_GNOMAD_AF.out.tbi.collect()                                // channel: [ val(meta), path(fasta) ]
         vep_resources         = UNTAR_VEP_CACHE.out.untar.map{meta, files -> [files]}.collect()  // channel: [ path(cache) ]
         versions              = ch_versions                                                      // channel: [ path(versions.yml) ]
 
